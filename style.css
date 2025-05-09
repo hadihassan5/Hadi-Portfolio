@@ -317,7 +317,8 @@ nav {
     gap: 2rem;
     margin-top: 4rem;
     width: 100%;
-    justify-items: center; /* Centers cards horizontally */
+    justify-items: center;
+    /* Centers cards horizontally */
 }
 
 .project-card {
@@ -753,6 +754,7 @@ footer p:hover {
 
     .section-title {
         font-size: 2rem;
+        padding-top: 40px;
     }
 
     .project-info {

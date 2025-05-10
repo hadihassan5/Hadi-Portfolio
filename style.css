@@ -920,6 +920,10 @@ footer p:hover {
         padding-top: 8px;
     }
 
+    #tag{
+        padding-top: 14px;
+    }
+    
     .hero-image-wrapper {
         width: 260px !important;
         height: 260px !important;

@@ -53,7 +53,7 @@
         <div class="hero-image-wrapper">
             <div class="hero-border"></div>
             <div class="hero-border"></div>
-            
+
             <div class="hero-image">
                 <img src="https://cdni.iconscout.com/illustration/premium/thumb/web-development-illustration-download-in-svg-png-gif-file-formats--website-application-app-solution-software-pack-seo-illustrations-2918517.png?f=webp"
                     alt="Hero" />
@@ -148,7 +148,8 @@
                         <a href="https://hadihassan5.github.io/Project_Shopping_Store/" target="_blank"
                             class="btn btn-primary">View Project</a>
                     </div>
-                    <p>A fully responsive and modern e-commerce platform built to offer a smooth, user-friendly shopping experience across all devices.</p>
+                    <p>A fully responsive and modern e-commerce platform built to offer a smooth, user-friendly shopping
+                        experience across all devices.</p>
                 </div>
             </div>
 
@@ -167,7 +168,8 @@
                         <a href="https://hadihassan5.github.io/UltraEdit-Downloads/" target="_blank"
                             class="btn btn-primary">View Project</a>
                     </div>
-                    <p>A fully responsive clone of the UltraEdit downloads page, replicating the original layout and design with pixel-perfect accuracy.</p>
+                    <p>A fully responsive clone of the UltraEdit downloads page, replicating the original layout and
+                        design with pixel-perfect accuracy.</p>
                 </div>
             </div>
 
@@ -185,10 +187,11 @@
         <h2 class="section-title">Let's Connect</h2>
         <div class="contact-grid">
             <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
+                <input type="text" name="user_name" placeholder="Name" required>
+
+                <input type="email" name="user_email" placeholder="Email" required>
                 <textarea name="message" placeholder="Message" required id="Msg"></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button class="btn btn-primary">Send Message</button>
             </form>
             <div class="contact-info">
                 <div class="social-links">
@@ -212,8 +215,6 @@
         <p>© 2025 Hadi Hassan. All Rights Reserved.</p>
     </footer>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- EmailJS Script -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
@@ -224,11 +225,16 @@
         document.querySelector(".contact-form").addEventListener("submit", (e) => {
             e.preventDefault();
 
+            const formData = new FormData(e.target);
+            formData.append("time", new Date().toLocaleString());
+
             emailjs.sendForm("service_vgbdwhw", "template_c82966s", e.target)
-                .then(() => alert("Success!"))
+                .then(() => {
+                    alert("Message sent successfully!"); 
+                    e.target.reset();
+                })
                 .catch((err) => alert("Error: " + err.text));
         });
-
     </script>
 
     <script src="script.js"></script>

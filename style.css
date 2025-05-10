@@ -424,7 +424,8 @@ nav {
 }
 
 #Msg {
-    height: 150px;
+  height: 150px;
+  resize: vertical;
 }
 
 .contact-form input,

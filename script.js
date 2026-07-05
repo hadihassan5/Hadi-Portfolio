@@ -12,26 +12,6 @@ const mobileMenu = document.getElementById('mobileMenu');
 burger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
 
-document.querySelectorAll('a.mail-link').forEach(link => {
-    link.addEventListener('click', (event) => {
-        const email = link.dataset.email || 'hadipk110@gmail.com';
-        const subject = link.dataset.subject || 'Hello Hadi';
-        const body = link.dataset.body || '';
-        let mailtoLink = `mailto:${email}`;
-
-        if (subject) {
-            mailtoLink += `?subject=${encodeURIComponent(subject)}`;
-        }
-
-        if (body) {
-            mailtoLink += `${subject ? '&' : '?'}body=${encodeURIComponent(body)}`;
-        }
-
-        window.location.href = mailtoLink;
-        event.preventDefault();
-    });
-});
-
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nlink');
 const io = new IntersectionObserver((entries) => {
